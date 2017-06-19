@@ -44,7 +44,7 @@ cmake --build . --target install
 RUN cd /usr/local/share/osrm/ && wget http://download.geofabrik.de/europe/turkey-latest.osm.pbf && \
 osrm-extract turkey-latest.osm.pbf -p profiles/car.lua && \
 osrm-contract turkey-latest.osrm && \
-osrm-routed turkey-latest.osrm
+osrm-routed turkey-latest.osrm &
 
 EXPOSE 5000
 
